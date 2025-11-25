@@ -22,7 +22,7 @@ import wave
 def encode():
     print("\nEncoding Starts..")
     
-    audio = wave.open(r"C:\Users\Rahul\Downloads\audiocheck.net_pinknoise.wav", mode="rb")
+    audio = wave.open(r"C:\Users\Downloads\audiocheck.net_pinknoise.wav", mode="rb") #Path
     frame_bytes = bytearray(list(audio.readframes(audio.getnframes())))
     string = str(input("Enter Text to be Encrypted : "))
     string = string + int((len(frame_bytes)-(len(string)*8*8))/8) * '#'
